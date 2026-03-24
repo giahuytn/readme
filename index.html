@@ -8,6 +8,36 @@
 <body>
     <h1>It is a mock payment website</h1>
     <p>Click the http link for testing</p>
-    <a href="http://www.pagoefectivo.la/pe/como-pagar/">http link</a>
+    <div>www.pagoefectivo: <a href="http://www.pagoefectivo.la/pe/como-pagar/">http link</a> </div>
+	<br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<div>invalid link <a href="http://mytest1234.com/">http://mytest1234.com/</a> </div>
+	
+	<div>call number: <a href="tel:0989609604"> 0989609604</a> </div>
+	<div>mailto <a href="mailto:huy.tran@trustonic.com">  mail</a> </div>
+	<div>market: <a href="market://details?id=com.facebook.katana"> facebook app</a> </div>
+	
+	<h2>Generate Hyperlink For Testing</h2>
+
+<input type="text" id="urlInput" placeholder="Enter URL (e.g. https://google.com)" size="40">
+<button onclick="createLink()">Create Link</button>
+
+<div id="result"></div>
+	
+	<script>
+function createLink() {
+    let url = document.getElementById("urlInput").value.trim();
+
+    if (!url) {
+        alert("Please enter a URL");
+        return;
+    }
+
+
+    const linkHTML = `<a href="${url}" target="_blank">${url}</a>`;
+    document.getElementById("result").innerHTML = linkHTML;
+}
+</script>
+
 </body>
 </html>
