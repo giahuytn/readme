@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It is a mock payment website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download APK</title>
+<style>
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #f4f5f7;
+    margin: 0;
+    padding: 40px 16px;
+    display: flex;
+    justify-content: center;
+  }
+  .list { width: 100%; max-width: 480px; }
+  h1 { font-size: 20px; margin: 0 0 16px; color: #222; }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    transition: transform .1s, box-shadow .1s;
+  }
+  .item:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,.15); }
+  .icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: #3ddc84; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .info { flex: 1; min-width: 0; }
+  .name { font-weight: 600; color: #222; }
+  .meta { font-size: 13px; color: #777; margin-top: 2px; }
+  .action { font-size: 13px; color: #1a73e8; font-weight: 600; }
+</style>
 </head>
 <body>
-    <h1>It is a mock payment website</h1>
-    <p>Click the http link for testing</p>
-    <div>www.pagoefectivo: <a href="http://www.pagoefectivo.la/pe/como-pagar/">http link</a> </div>
-	<br/>
-	<br/><br/><br/><br/><br/><br/><br/><br/>
-	<div>invalid link <a href="http://mytest1234.com/">http://mytest1234.com/</a> </div>
-	
-	<div>call number: <a href="tel:0989609604"> 0989609604</a> </div>
-	<div>mailto <a href="mailto:huy.tran@trustonic.com">  mail</a> </div>
-	<div>market: <a href="market://details?id=com.facebook.katana"> facebook app</a> </div>
-	
-	<h2>Generate Hyperlink For Testing</h2>
-
-<input type="text" id="urlInput" placeholder="Enter URL (e.g. https://google.com)" size="40">
-<button onclick="createLink()">Create Link</button>
-
-<div id="result"></div>
-	
-	<script>
-function createLink() {
-    let url = document.getElementById("urlInput").value.trim();
-
-    if (!url) {
-        alert("Please enter a URL");
-        return;
-    }
-
-
-    const linkHTML = `<a href="${url}" target="_blank">${url}</a>`;
-    document.getElementById("result").innerHTML = linkHTML;
-}
-</script>
-
+  <div class="list">
+    <h1>Downloads</h1>
+    <a class="item"
+       href="https://github.com/giahuytn/sipanote/raw/refs/heads/main/FlappyBird_1.0_APKPure.apk"
+       download="FlappyBird_1.0_APKPure.apk">
+      <div class="icon">&#9660;</div>
+      <div class="info">
+        <div class="name">FlappyBird_1.0_APKPure.apk</div>
+        <div class="meta">Android APK &middot; tap to download</div>
+      </div>
+      <div class="action">Download</div>
+    </a>
+  </div>
 </body>
 </html>
